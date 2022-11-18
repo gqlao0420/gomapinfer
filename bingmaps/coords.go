@@ -2,7 +2,7 @@ package bingmaps
 
 import (
 	//"../common"
-	"github.com/mitroadmaps/gomapinfer/common"
+	"github.com/IronSublimate/gomapinfer/common"
 
 	"math"
 )
