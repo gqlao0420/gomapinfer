@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/mitroadmaps/gomapinfer/common"
+	"github.com/IronSublimate/gomapinfer/common"
 
 	"flag"
 	"fmt"
@@ -10,9 +10,9 @@ import (
 )
 
 var (
-	inFname = flag.String("in", "in.graph", "input filename")
-	outFname = flag.String("out", "out.graph", "output filename")
-	rectStr = flag.String("rect", "", "e.g. 500,500,1000,1000")
+	inFname   = flag.String("in", "in.graph", "input filename")
+	outFname  = flag.String("out", "out.graph", "output filename")
+	rectStr   = flag.String("rect", "", "e.g. 500,500,1000,1000")
 	originStr = flag.String("origin", "", "empty for no origin, e.g. 34,34 to convert to meters with origin")
 )
 

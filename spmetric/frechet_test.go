@@ -1,7 +1,7 @@
 package spmetric
 
 import (
-	"github.com/mitroadmaps/gomapinfer/common"
+	"github.com/IronSublimate/gomapinfer/common"
 
 	"math"
 	"testing"
@@ -10,7 +10,7 @@ import (
 func TestComputeFrechetDistance(t *testing.T) {
 	f := func(a []common.Point, b []common.Point, expected float64) {
 		d := ComputeFrechetDistance(a, b)
-		if math.Abs(d - expected) > 0.001 {
+		if math.Abs(d-expected) > 0.001 {
 			t.Errorf("d(%v, %v) got %v expected %v", a, b, d, expected)
 		}
 	}
@@ -28,7 +28,7 @@ func TestComputeFrechetDistance(t *testing.T) {
 		{0, 0},
 	}
 	f(path, []common.Point{{0, 0}}, math.Sqrt(2))
-	f(path, []common.Point{{0.5, 0.5}}, math.Sqrt(2) / 2)
+	f(path, []common.Point{{0.5, 0.5}}, math.Sqrt(2)/2)
 
 	// two paths, one with detour
 	directPath := []common.Point{
@@ -100,7 +100,7 @@ func TestGetClosestPath(t *testing.T) {
 			}
 			points = append(points, outNodes[i].Point)
 		}
-		if math.Abs(gotD - d) > 0.001 {
+		if math.Abs(gotD-d) > 0.001 {
 			t.Errorf("GetClosestPath(%v) got distance %v expected %v", inPath, gotD, d)
 			return
 		}
@@ -126,5 +126,5 @@ func TestGetClosestPath(t *testing.T) {
 		v11,
 		v31,
 		v32,
-	}, math.Sqrt(2) / 5)
+	}, math.Sqrt(2)/5)
 }

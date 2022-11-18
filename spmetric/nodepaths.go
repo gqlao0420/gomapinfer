@@ -1,7 +1,7 @@
 package spmetric
 
 import (
-	"github.com/mitroadmaps/gomapinfer/common"
+	"github.com/IronSublimate/gomapinfer/common"
 
 	"encoding/json"
 	"fmt"
@@ -11,13 +11,13 @@ import (
 )
 
 type NodePathsGraph struct {
-	Graph *common.Graph
+	Graph     *common.Graph
 	NodePaths map[int]NodePaths
 }
 
 type NodePaths struct {
-	Backpointers map[int]int `json:"backpointers"`
-	Distances map[int]float64 `json:"distances"`
+	Backpointers map[int]int     `json:"backpointers"`
+	Distances    map[int]float64 `json:"distances"`
 }
 
 func (g NodePathsGraph) GetShortestPath(src *common.Node, dst *common.Node, maxDistance float64) []*common.Node {
@@ -36,7 +36,7 @@ func (g NodePathsGraph) GetShortestPath(src *common.Node, dst *common.Node, maxD
 	}
 	path := make([]*common.Node, len(reverseSeq))
 	for i, node := range reverseSeq {
-		path[len(path) - i - 1] = node
+		path[len(path)-i-1] = node
 	}
 	return path
 }
