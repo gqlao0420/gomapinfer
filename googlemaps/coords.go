@@ -2,7 +2,8 @@ package googlemaps
 
 import (
 	//"../common"
-	"github.com/IronSublimate/gomapinfer/common"
+	//"github.com/IronSublimate/gomapinfer/common"
+	"github.com/ironsublimate/gomapinfer/common"
 
 	"math"
 )
